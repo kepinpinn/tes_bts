@@ -1,6 +1,5 @@
 <?php
-use App\Http\Controllers\api\DataController;
-use DataController as GlobalDataController;
+use App\Http\Controllers\Data2Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('user', [App\Http\Controllers\api\DataController::class, 'indexShopping']);
-Route::get('getShopping', [App\Http\Controllers\api\DataController::class, 'indexShopping']);
-Route::get('getShoppingById/{id}', [App\Http\Controllers\api\DataController::class, 'getShoppingById']);
-Route::post('saveShopping', [App\Http\Controllers\api\DataController::class, 'saveShopping']);
-Route::post('updateShopping/{id}', [App\Http\Controllers\api\DataController::class, 'updateShopping']);
-Route::get('deleteShopping/{id}', [App\Http\Controllers\api\DataController::class, 'deleteShopping']);
+Route::get('user', [App\Http\Controllers\Data2Controller::class, 'index']);
+Route::get('indexShopping', [App\Http\Controllers\Data2Controller::class, 'indexShopping']);
+Route::get('getShoppingById/{id}', [App\Http\Controllers\Data2Controller::class, 'getShoppingById']);
+Route::post('create', [App\Http\Controllers\Data2Controller::class, 'create']);
+Route::post('updateShopping/{id}', [App\Http\Controllers\Data2Controller::class, 'updateShopping']);
+Route::get('deleteShopping/{id}', [App\Http\Controllers\Data2Controller::class, 'deleteShopping']);
